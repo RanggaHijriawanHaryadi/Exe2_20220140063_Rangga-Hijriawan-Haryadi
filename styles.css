@@ -1,0 +1,109 @@
+body {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to start from top */
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+nav.navbar {
+    width: 100%; /* Ensure the navbar spans the full width */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed to create space between navbar and form */
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.header h3 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure the form takes the full width of its container */
+}
+
+label {
+    margin-bottom: 5px;
+    color: #000; /* Set label text color to black */
+}
+
+input[type="text"], textarea {
+    width: 100%; /* Full width for inputs and textareas */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Menjadikan lebar image-container menjadi 100% */
+    height: 200px; /* Menjadikan tinggi image-container menjadi 200px */
+}
+
+.image-container img {
+    width: 100%; /* Memastikan gambar mengisi lebar image-container */
+    height: 100%; /* Memastikan gambar mengisi tinggi image-container */
+    object-fit: cover; /* Memastikan gambar sesuai ke dalam image-container tanpa merubah aspek rasio */
+}
+
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    overflow-y: auto; /* Tambahkan overflow-y untuk scroll vertikal */
+}
+
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px;
+    width: 80%; /* Lebar teks agar sesuai dengan foto */
+}
